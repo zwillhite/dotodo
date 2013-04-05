@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Task Details</h1>
+
+<p>
+  <b>Task:</b>
+  <%= @task.label %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @task.category.label %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <b>Completion date:</b>
+  <%= @task.completion_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

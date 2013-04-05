@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @category.label %> Tasks</h1>
+
+<table>
+  <tr>
+  	<th>Task</th>
+    <th>Due date</th>
+  </tr>
+
+<% @category.tasks.each do |task| %>
+  <tr>
+  	<td><%= task.label %></td>
+    <td><%= task.due_date %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back To Categories List', categories_path %>  |  <%= link_to 'Edit Category', edit_category_path(@category) %>
